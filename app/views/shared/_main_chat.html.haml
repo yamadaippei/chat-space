@@ -1,0 +1,34 @@
+%div.contents 
+ %div.contents-top
+  %div.left-box
+   %div.current-group test
+   %ul.member-list
+    %li.member-name Member : masa
+  = link_to "#" , class: "edit" do
+   %div.edit-btn Edit
+
+ %div.messages
+  %div.message
+   %div.info
+    %p.talker wowowo
+    %p.date 2020/1/1
+   %p.text wwww
+  %div.message
+   %div.info
+    %p.talker wowowo
+    %p.date 2020/1/1
+   %p.text wwww
+  %div.message
+   %div.info
+    %p.talker wowowo
+    %p.date 2020/1/1
+   %p.text wwww
+
+ %div.form
+  %form.new-message
+   %div.box
+    %input.text{:placeholder => "type a message"}/
+    %label{class: "image",for: "message_image"}
+     = icon('fas', 'image') 
+     %input{class: "file",type: "file",id: "message_image"}
+   %input.submit-btn{:type=>"submit",:name=>"commit",:value=>"Send",:data-disable-with=>"Send"}
