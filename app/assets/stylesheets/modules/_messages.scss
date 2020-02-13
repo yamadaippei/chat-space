@@ -41,30 +41,30 @@ $long: 100px;
     display: flex;
     padding: 0 $short;
     align-items: $center;
-    .side-top__box{
+     &__box{
       display: flex;
       justify-content: space-between;
       width: $full;
       align-items: $center;
       height: $short;
-      .side-top__box__name{
+       &__name{
         height: $full;
         width: 200px;
         color: $white;
       }
-      .side-top__box__icon{
+       &__icon{
         height: $full;
         display: flex;
         line-height: $short;
         text-align: right;
-        .side-top__box__icon__new{
+         &__new{
           width: 18px;
           height: 18x;
           .group{
             color: $white;
           }
         }
-        .side-top__box__icon__edit{
+         &__edit{
           width: $short;
           height: $short;
           padding-left: 5px;
@@ -82,9 +82,50 @@ $long: 100px;
 
 
 .contents{
-  width: calc(#{$full-w} - 300px);
+  width: calc( #{$full-w} - 300px );
   float: left;
+  .form{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: $short $forty;
+    .new-message{
+      display: flex;
+      height: 50px;
+      .box{
+        position: relative;
+        width: 80%;
+        .text{
+          height: 50px;
+          width: 100%;
+          padding: 0 $forty 0 $very-short;
+          color: $gray;
+          border-style: none;
+          position: absolute;
+          }
+        .image{
+          position: absolute;
+          float: right;
+          top: $very-short;
+          right: $very-short;
+          font-size: 1.3rem;
+          cursor: pointer;
+          .file{
+            display: none;
+          }
         }
+      .submit-btn{
+          width: $long;
+          padding: 0 30px ;
+          margin-left: 15px;
+          background-color: $light-blue;
+          color: $white;
+          cursor: pointer;
+          text-align: $center;
+        }
+       }
+      }
+    }
+   }
   .messages{
     background-color: #fafafa;
     height: calc(#{$full-h} - 190px);
@@ -145,49 +186,3 @@ $long: 100px;
       }
     }
   }
-
-
-.form{
-  height: 90px;
-  background-color: #d2d2d2;
-  padding: $short $forty;
-  .new-message{
-    display: flex;
-    height: 50px;
-    .box{
-      position: relative;
-      width: 80%;
-      
-      .text{
-        height: 50px;
-        width: $full-w;
-        padding: 0 $forty 0 $very-short;
-        color: $gray;
-        border-style: none;
-        }
-      }
-    }
-  }
-
-.image{
-  position: absolute;
-  top: $very-short;
-  right: $very-short;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-  
-.file{
-  display: none;
-}
-
-.submit-btn{
-  width: $long;
-  height: 50px;
-  padding: 0 $short ;
-  margin-left: 15px;
-  background-color: $light-blue;
-  color: $white;
-  cursor: pointer;
-  text-align: $center;
-}
