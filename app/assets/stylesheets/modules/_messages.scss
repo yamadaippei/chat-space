@@ -91,9 +91,19 @@ $long: 100px;
     .new-message{
       display: flex;
       height: 50px;
+      .submit-btn{
+        width: $long;
+        padding: 0 30px ;
+        margin-left: 15px;
+        background-color: $light-blue;
+        color: $white;
+        cursor: pointer;
+        text-align: $center;
+      }
       .box{
         position: relative;
         width: 80%;
+       }
         .text{
           height: 50px;
           width: 100%;
@@ -113,19 +123,12 @@ $long: 100px;
             display: none;
           }
         }
-      .submit-btn{
-          width: $long;
-          padding: 0 30px ;
-          margin-left: 15px;
-          background-color: $light-blue;
-          color: $white;
-          cursor: pointer;
-          text-align: $center;
-        }
        }
       }
     }
-   }
+
+   
+
   .messages{
     background-color: #fafafa;
     height: calc(#{$full-h} - 190px);
