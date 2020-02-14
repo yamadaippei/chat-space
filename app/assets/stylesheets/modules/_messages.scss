@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+$white: white;
+$light-blue: #38aef0;
+$gray: #434a54;
+$full: 100%;
+$full-h: 100vh;
+$full-w: 100vw;
+$short: 20px;
+$center: center;
+$forty: 40px;
+$very-short: 10px;
+$long: 100px;
+
+.side-main{
+  float: left;
+  width: 300px;
+  background-color: $white;
+  font-weight: bold;
+  .side-contents{
+    overflow: scroll;
+    padding: $short $short;
+    background-color: #2f3e51;
+    height: calc(#{$full-h} - #{$long});
+    color: $white;
+    .side-content{
+      margin-bottom: $forty;
+      .group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .group-message{
+        font-size: 11px;
+      }
+    }
+  }
+  .side-top{
+    height: $long;
+    background-color: #253141;
+    display: flex;
+    padding: 0 $short;
+    align-items: $center;
+     &__box{
+      display: flex;
+      justify-content: space-between;
+      width: $full;
+      align-items: $center;
+      height: $short;
+       &__name{
+        height: $full;
+        width: 200px;
+        color: $white;
+      }
+       &__icon{
+        height: $full;
+        display: flex;
+        line-height: $short;
+        text-align: right;
+         &__new{
+          width: 18px;
+          height: 18x;
+          .group{
+            color: $white;
+          }
+        }
+         &__edit{
+          width: $short;
+          height: $short;
+          padding-left: 5px;
+          .user{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.contents{
+  width: calc( #{$full-w} - 300px );
+  float: left;
+  .form{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: $short $forty;
+    .new-message{
+      display: flex;
+      height: 50px;
+      .submit-btn{
+        width: $long;
+        padding: 0 30px ;
+        margin-left: 15px;
+        background-color: $light-blue;
+        color: $white;
+        cursor: pointer;
+        text-align: $center;
+      }
+      .box{
+        position: relative;
+        width: 80%;
+       }
+        .text{
+          height: 50px;
+          width: 100%;
+          padding: 0 $forty 0 $very-short;
+          color: $gray;
+          border-style: none;
+          position: absolute;
+          }
+        .image{
+          position: absolute;
+          float: right;
+          top: $very-short;
+          right: $very-short;
+          font-size: 1.3rem;
+          cursor: pointer;
+          .file{
+            display: none;
+          }
+        }
+       }
+      }
+    }
+
+   
+
+  .messages{
+    background-color: #fafafa;
+    height: calc(#{$full-h} - 190px);
+    padding: 46px $forty;
+    overflow: scroll;
+    .message{
+      padding-bottom: $forty;
+      .text{
+        color: $gray;
+        font-size: 14px;
+        margin-bottom: $very-short;
+      }
+      .info{
+        display: flex;
+        margin-bottom: $very-short;
+        .talker{
+          color: $gray;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: $very-short;
+        }
+      }
+    }
+  }
+  .contents-top{
+    height: $long;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    overflow: scroll;
+    padding: 0 $forty;
+    .edit{
+      text-decoration: none;
+      color: $light-blue;
+      .edit-btn{
+        height: $forty;
+        line-height: $forty;
+        padding: 0 $short;
+        margin-top: 28px;
+        left: $forty;
+        border: solid 1px $light-blue;
+      }
+    }
+    .left-box{
+      margin-top: 35px;
+      .member-list{
+        font-size: 12px;
+        color: #999999;
+      }
+      .current-group{
+        font-size: $short;
+        color: #333333;
+        margin-bottom: 15px;
+      }
+    }
+  }

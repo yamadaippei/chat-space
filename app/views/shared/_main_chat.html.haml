@@ -1,0 +1,44 @@
+.contents 
+ .contents-top
+  .left-box
+   .current-group test
+   .member-list
+    .member-name Member : masa
+  = link_to "#" , class: "edit" do
+   .edit-btn Edit
+
+ .messages
+  .message
+   .info
+    .talker wowowo
+    .date 2020/1/1
+   .text wwww
+  .message
+   .info
+    .talker wowowo
+    .date 2020/1/1
+   .text wwww
+  .message
+   .info
+    .talker wowowo
+    .date 2020/1/1
+   .text wwww
+  .message
+   .info
+    .talker wowowo
+    .date 2020/1/1
+   .text wwww
+  .message
+   .info
+    .talker wowowo
+    .date 2020/1/1
+   .text wwww
+
+ .form
+  .new-message
+   .box
+    %input.text{placeholder: 'type a message'}
+    %label:{class: "image",for: "message_image"}
+     = icon('fas', 'image') 
+     %input{class: "file",type: "file",id: "message_image"}
+   %input.submit-btn{type: "submit" , name: "commit" , value: "Send"}
