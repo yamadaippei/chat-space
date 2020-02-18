@@ -1,38 +1,20 @@
 .side-main
- .side-top
-  .side-top__box
-   .side-top__box__name
-    = current_user.name
-   .side-top__box__icon
-    .side-top__box__icon__new
-     = link_to "#" , class: "group" do
-      = icon("fas", "edit")
-    .side-top__box__icon__edit
-     = link_to edit_user_path(current_user), class: "user" do
-      = icon("fas", "cog")
-
- .side-contents
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
-  .side-content
-   .group-name<techcamp
-   .group-message<まだメッセージはありません
+  .side-top
+    .side-top__box
+      .side-top__box__name
+        = current_user.name
+      .side-top__box__icon
+        .side-top__box__icon__new
+        = link_to new_group_path, class: "group" do
+          = icon("fas", "edit")
+        .side-top__box__icon__edit
+        = link_to edit_user_path(current_user), class: "user" do
+          = icon("fas", "cog")
+  .side-contents
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group-message
+            メッセージはまだありません。

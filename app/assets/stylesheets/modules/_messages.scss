@@ -24,61 +24,56 @@ $long: 100px;
     background-color: #2f3e51;
     height: calc(#{$full-h} - #{$long});
     color: $white;
-    .side-content{
+    .group{
       margin-bottom: $forty;
       .group-name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: $white;
       }
       .group-message{
         font-size: 11px;
+        color: $white;
       }
     }
   }
+  
   .side-top{
     height: $long;
     background-color: #253141;
     display: flex;
     padding: 0 $short;
     align-items: $center;
-     &__box{
+    &__box{
       display: flex;
       justify-content: space-between;
       width: $full;
       align-items: $center;
       height: $short;
-       &__name{
+      &__name{
         height: $full;
         width: 200px;
         color: $white;
-      }
-       &__icon{
-        height: $full;
-        display: flex;
-        line-height: $short;
-        text-align: right;
-         &__new{
-          width: 18px;
-          height: 18x;
-          .group{
-            color: $white;
-          }
-        }
-         &__edit{
-          width: $short;
-          height: $short;
-          padding-left: 5px;
-          .user{
-            color: $white;
-          }
-        }
       }
     }
   }
 }
 
-
-
+.side-top__box__icon{
+  height: $full;
+  line-height: $short;
+  text-align: right;
+    .side-top__box__new{
+      width: 18px;
+      height: 18x;
+        .group{
+          color: $white;
+      .__edit{
+        width: $short;
+        height: $short;
+        padding-left: 5px;
+          .user{
+            color: $white;
 
 
 .contents{
@@ -188,3 +183,5 @@ $long: 100px;
       }
     }
   }
+}
+}
