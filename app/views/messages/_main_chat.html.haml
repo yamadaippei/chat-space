@@ -1,44 +1,25 @@
 .contents 
- .contents-top
-  .left-box
-   .current-group test
-   .member-list
-    .member-name Member : masa
-  = link_to "#" , class: "edit" do
-   .edit-btn Edit
+  .contents-top
+    .left-box
+      .current-group 
+        = @group.name
+        .member-list
+          .member-name 
+            Member :
+            - @group.users.each do |user|
+              = user.name
+  = link_to edit_group_path(@group), class: "edit" do
+    .edit-btn Edit
+      
 
- .messages
-  .message
-   .info
-    .talker wowowo
-    .date 2020/1/1
-   .text wwww
-  .message
-   .info
-    .talker wowowo
-    .date 2020/1/1
-   .text wwww
-  .message
-   .info
-    .talker wowowo
-    .date 2020/1/1
-   .text wwww
-  .message
-   .info
-    .talker wowowo
-    .date 2020/1/1
-   .text wwww
-  .message
-   .info
-    .talker wowowo
-    .date 2020/1/1
-   .text wwww
+  .messages
+    = render @messages
 
- .form
-  .new-message
-   .box
-    %input.text{placeholder: 'type a message'}
-    %label:{class: "image",for: "message_image"}
-     = icon('fas', 'image') 
-     %input{class: "file",type: "file",id: "message_image"}
-   %input.submit-btn{type: "submit" , name: "commit" , value: "Send"}
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'text', placeholder: 'type a message'
+      .box
+        = f.label :image, class: 'image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'file'
+      = f.submit 'Send', class: 'submit-btn'
