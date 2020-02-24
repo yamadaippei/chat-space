@@ -8,8 +8,8 @@
             Member :
             - @group.users.each do |user|
               = user.name
-  = link_to edit_group_path(@group), class: "edit" do
-    .edit-btn Edit
+    = link_to edit_group_path(@group), class: "edit" do
+      .edit-btn Edit
       
 
   .messages
@@ -17,9 +17,10 @@
 
   .form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'text', placeholder: 'type a message'
-      .box
-        = f.label :image, class: 'image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'file'
-      = f.submit 'Send', class: 'submit-btn'
+      .new-message
+        .box
+          = f.text_field :content, class: 'text', placeholder: 'type a message'
+          = f.label :image, class: 'image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'file'
+        = f.submit 'Send', class: 'submit-btn'

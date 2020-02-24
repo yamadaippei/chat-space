@@ -63,17 +63,21 @@ $long: 100px;
   height: $full;
   line-height: $short;
   text-align: right;
-    .side-top__box__new{
-      width: 18px;
-      height: 18x;
-        .group{
-          color: $white;
-      .__edit{
-        width: $short;
-        height: $short;
-        padding-left: 5px;
-          .user{
-            color: $white;
+  display: flex;
+  &__new{
+    margin-left: 0.3rem;
+    .group{
+      color: white;
+    }
+  }
+}
+
+.side-top__box__icon__edit{
+    margin-left: 0.3rem;
+    .user{
+        color: white;
+  }
+}
 
 
 .contents{
@@ -86,6 +90,7 @@ $long: 100px;
     .new-message{
       display: flex;
       height: 50px;
+      width: 80%;
       .submit-btn{
         width: $long;
         padding: 0 30px ;
@@ -94,11 +99,11 @@ $long: 100px;
         color: $white;
         cursor: pointer;
         text-align: $center;
-      }
+        }
       .box{
         position: relative;
         width: 80%;
-       }
+         }
         .text{
           height: 50px;
           width: 100%;
@@ -150,41 +155,36 @@ $long: 100px;
         }
       }
     }
-  }
-  .contents-top{
-    height: $long;
-    display: flex;
-    background-color: #ffffff;
-    justify-content: space-between;
-    overflow: scroll;
-    padding: 0 $forty;
-    .edit{
-      text-decoration: none;
-      color: $light-blue;
-      .edit-btn{
-        height: $forty;
-        line-height: $forty;
-        padding: 0 $short;
-        margin-top: 28px;
-        left: $forty;
-        border: solid 1px $light-blue;
-      }
-    }
-    .left-box{
-      margin-top: 35px;
-      .member-list{
-        font-size: 12px;
-        color: #999999;
-      }
-      .current-group{
-        font-size: $short;
-        color: #333333;
-        margin-bottom: 15px;
-      }
-    }
-  }
 }
-      }
+.contents-top{
+  height: $long;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  overflow: scroll;
+  padding: 0 $forty;
+  .edit{
+    text-decoration: none;
+    color: $light-blue;
+    .edit-btn{
+      height: $forty;
+      line-height: $forty;
+      padding: 0 $short;
+      margin-top: 28px;
+      left: $forty;
+      border: solid 1px $light-blue;
+    }
+  }
+  .left-box{
+    margin-top: 35px;
+    .member-list{
+      font-size: 12px;
+      color: #999999;
+    }
+    .current-group{
+      font-size: $short;
+      color: #333333;
+      margin-bottom: 15px;
     }
   }
 }
