@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
+:any-link{
+  text-decoration: none;
+}
+
 $white: white;
 $light-blue: #38aef0;
 $gray: #434a54;
@@ -164,7 +169,6 @@ $long: 100px;
   overflow: scroll;
   padding: 0 $forty;
   .edit{
-    text-decoration: none;
     color: $light-blue;
     .edit-btn{
       height: $forty;
