@@ -95,7 +95,7 @@ $long: 100px;
     .new-message{
       display: flex;
       height: 50px;
-      width: 80%;
+      width: 100%;
       .submit-btn{
         width: $long;
         padding: 0 30px ;
@@ -107,7 +107,7 @@ $long: 100px;
         }
       .box{
         position: relative;
-        width: 80%;
+        width: 90%;
          }
         .text{
           height: 50px;
